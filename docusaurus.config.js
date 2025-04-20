@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Maxime_vhw',
+  title: 'Maxime Vanhoorneweder',
   tagline: 'Ethical Hacker',
   favicon: 'img/favicon.ico',
 
