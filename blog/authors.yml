@@ -1,5 +1,5 @@
 yangshun:
-  name: Yangshun Tay
+  name: Maxime Vanhoorneweder
   title: Front End Engineer @ Facebook
   url: https://github.com/yangshun
   image_url: https://github.com/yangshun.png
@@ -9,15 +9,15 @@ yangshun:
     github: yangshun
 
 slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
+  name: Maxime Vanhoorneweder
+  title: Ethical Hacker
+  url: https://maximevhw.com
   image_url: https://github.com/slorber.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
     permalink: '/all-sebastien-lorber-articles'
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
+    x: maximevhw
+    linkedin: maxime-Vanhoorneweder
+    github: maximevhw
     newsletter: https://thisweekinreact.com
