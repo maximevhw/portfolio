@@ -33,9 +33,9 @@ const easeInOutCubic = (x) =>
   x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 
 const ProfileCardComponent = ({
-  avatarUrl = "img/profile.png",
+  avatarUrl = require("@site/static/img/profile.png").default,
   iconUrl = "<Placeholder for icon URL>",
-  grainUrl = "img/grain.webp",
+  grainUrl = require("@site/static/img/grain.webp").default,
   behindGradient,
   innerGradient,
   showBehindGradient = false,
