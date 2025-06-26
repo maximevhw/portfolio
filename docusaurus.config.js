@@ -69,7 +69,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Maxime Vanhoorneweder',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -99,40 +99,27 @@ const config = {
                 label: 'Tutorial',
                 to: '/docs/intro',
               },
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
             ],
           },
           {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/maxime-vanhoorneweder/',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/maximevhw',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Maxime Vanhoorneweder`,
       },
       prism: {
         theme: prismThemes.github,
