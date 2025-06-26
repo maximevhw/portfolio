@@ -1,7 +1,10 @@
-# Hey
+---
+title: Cat
+authors: [maxime]
+tags: []
+---
 
-cat
+# Hey
+![cat](./cat.jpg)
 
 <!-- truncate -->
-
-![cat](./cat.jpg)
