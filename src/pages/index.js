@@ -6,6 +6,8 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ProfileCard from '@site/src/components/ProfileCard';
 import LetterGlitch from '@site/src/components/LetterGlitch';
 
+import CustomTimeline from '@site/src/components/Timelines';
+
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
@@ -48,7 +50,7 @@ export default function Home() {
       description="Portfolio of Maxime Vanhoorneweder.">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <CustomTimeline />
       </main>
     </Layout>
   );
