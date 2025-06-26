@@ -1,11 +1,11 @@
 export const timelineData = [
     {
-        title: 'BSc Applied Computer Science',
-        description: 'Cyber Security Proffesional\nHowest, Brugge',
+        title: 'Cyber Security Proffesional',
+        description: 'BSc Applied Computer Science\nHowest, Brugge',
         date: 'September 2022 - June 2025'
     },    {
         title: 'Internship @e-BO Enterprises',
-        description: '• Phishing campaign\n• Cybersecurity awareness',
+        description: '• Phishing campaign\n• Built a chatbot to automate access requests.\n• Improve password manager performance\n• Automate tasks using PowerShell scripts',
         date: 'Feb - May 2025'
     },
     {
@@ -15,7 +15,7 @@ export const timelineData = [
     },
     {
         title: 'Outkept',
-        description: 'Phishing campaigns',
+        description: 'Created phishing campaigns for a community-driven security awareness platform.',
         date: 'August 2023 - Present'
     },
     {
