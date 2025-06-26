@@ -1,15 +1,15 @@
 export const timelineData = [
     {
-        title: 'Graduated Howest',
-        description: 'Bachelor in Applied Computer Science\n Cyber Security Proffesional',
+        title: 'BSc Applied Computer Science',
+        description: 'Cyber Security Proffesional\nHowest, Brugge',
         date: 'September 2022 - June 2025'
     },    {
-        title: 'Internship at e-BO Enterprises',
+        title: 'Internship @e-BO Enterprises',
         description: '• Phishing campaign\n• Cybersecurity awareness',
         date: 'Feb - May 2025'
     },
     {
-        title: 'Student Job at e-BO Enterprises',
+        title: 'Student Job @e-BO Enterprises',
         description: '• Phishing campaign\n• Cybersecurity awareness',
         date: 'July 2024'
     },
