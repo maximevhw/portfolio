@@ -1,7 +1,7 @@
 export const timelineData = [
     {
         title: 'Cyber Security Proffesional',
-        description: 'BSc Applied Computer Science\nHowest, Brugge',
+        description: 'BSc Applied Computer Science\nMagna cum laude\nHowest, Brugge',
         date: 'September 2022 - June 2025'
     },    {
         title: 'Internship @e-BO Enterprises',
