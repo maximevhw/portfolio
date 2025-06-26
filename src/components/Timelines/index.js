@@ -16,6 +16,7 @@ const TimelineItem = ({ data }) => (
 const CustomTimeline = ({ data = timelineData}) => {
     return (
         <>
+        <h2 className="timeline-header">Timeline</h2>
             {data.length > 0 && (
                 <div className="timeline-container">
                     {data.map((item, idx) => (

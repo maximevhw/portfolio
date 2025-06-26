@@ -1,5 +1,48 @@
 /* Component-specific styles only */
 
+.timeline-header {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e17b77, #c44569, #e17b77);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #e17b77; /* Fallback for browsers that don't support background-clip */
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+.timeline-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #e17b77, #c44569);
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(225, 123, 119, 0.3);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 .timeline-container {
     display: flex;
     flex-direction: column;
