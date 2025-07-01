@@ -1,12 +1,12 @@
 import { React, useEffect, useState } from 'react';
 import { ReactTerminal } from "react-terminal";
 import { useColorMode } from '@docusaurus/theme-common';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import "./Terminal.css";
 
 function Terminal() {
     const { colorMode } = useColorMode();
     const [showCatPopup, setShowCatPopup] = useState(false);
-    const [catImageUrl, setCatImageUrl] = useState('');
     const welcomeMessage = (
         <span>
             Type "help" for all available commands. <br />
@@ -16,13 +16,12 @@ function Terminal() {
         <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
             <li><span style={{ color: 'blue' }}>•</span> Name: Maxime Vanhoorneweder</li>
             <li><span style={{ color: 'blue' }}>•</span> Profession: Cybersecurity Graduate</li>
-            <li><span style={{ color: 'blue' }}>•</span> Interest: Pentesting and SOC operations</li>
+            <li><span style={{ color: 'blue' }}>•</span> Interests: Pentesting and SOC operations</li>
             <li><span style={{ color: 'blue' }}>•</span> Hobbies: Cars</li>
         </ul>
     );
 
     function CatPopup() {
-        setCatImageUrl(`https://cataas.com/cat?${Date.now()}`);
         setShowCatPopup(true);
         return (
             <span>Here's a cat for you!</span>
@@ -33,17 +32,28 @@ function Terminal() {
     const defaultCommands = {
         whoami: whoami,
         cat: CatPopup,
-        help: "Available commands: whoami, help, clear, ls",
+        help: "Available commands: whoami, help, clear, ls, cat, echo",
         ls: "tutorial.js  index.js  blog.js  secret.js",
-        echo: (args) => args.join(' '),
+        echo: (args) => {
+            // Handle different argument formats that react-terminal might pass
+            if (typeof args === 'string') {
+                return args;
+            } else if (Array.isArray(args)) {
+                return args.join(' ');
+            } else if (args && typeof args === 'object') {
+                // If args is an object with the command arguments
+                return Object.values(args).join(' ');
+            }
+            return '';
+        },
     };
 
     // Theme configurations
     const lightTheme = {
-        themeBGColor: "#f8f8f8",
-        themeToolbarColor: "#e8e8e8",
-        themeColor: "#333333",
-        themePromptColor: "#666666"
+        themeBGColor: "#b3b3b3",
+        themeToolbarColor: "#595959",
+        themeColor: "#e8e8e8",
+        themePromptColor: "#000000"
     };
 
     const darkTheme = {
@@ -59,16 +69,20 @@ function Terminal() {
         <div className="terminal-container">
             <h2>Terminal</h2>
             <div className="terminal-wrapper">
-                <ReactTerminal
-                    welcomeMessage={welcomeMessage}
-                    commands={defaultCommands}
-                    prompt="maxime@portfolio:~$"
-                    showControlBar={true}
-                    themes={{
-                        "custom-theme": currentTheme
-                    }}
-                    theme="custom-theme"
-                />
+                <BrowserOnly fallback={<div>Loading terminal...</div>}>
+                    {() => (
+                        <ReactTerminal
+                            welcomeMessage={welcomeMessage}
+                            commands={defaultCommands}
+                            prompt="maxime@portfolio:~$"
+                            showControlBar={true}
+                            themes={{
+                                "custom-theme": currentTheme
+                            }}
+                            theme="custom-theme"
+                        />
+                    )}
+                </BrowserOnly>
             </div>
             
             {showCatPopup && (
@@ -85,7 +99,7 @@ function Terminal() {
                             ×
                         </button>
                         <img 
-                            src={catImageUrl} 
+                            src={`https://cataas.com/cat?${Date.now()}`}
                             alt="Random Cat" 
                             className="cat-popup-image"
                         />
