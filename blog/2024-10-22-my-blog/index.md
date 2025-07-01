@@ -1,5 +1,5 @@
 ---
-title: My New Blog Setup: Docusaurus + GitHub Pages
+title: "My New Blog Setup: Docusaurus + GitHub Pages"
 # authors: maxime
 tags: []
 ---
