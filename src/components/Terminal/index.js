@@ -50,9 +50,9 @@ function Terminal() {
 
     // Theme configurations
     const lightTheme = {
-        themeBGColor: "#b3b3b3",
+        themeBGColor: "#e6e6e6",
         themeToolbarColor: "#595959",
-        themeColor: "#e8e8e8",
+        themeColor: "#000000",
         themePromptColor: "#000000"
     };
 
