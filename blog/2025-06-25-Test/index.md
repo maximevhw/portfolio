@@ -5,6 +5,7 @@ tags: []
 ---
 
 # Hey
-![cat](./cat.jpg)
+Cat :)
 
 <!-- truncate -->
+![cat](./cat.jpg)
