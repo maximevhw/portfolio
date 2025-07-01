@@ -1,10 +1,8 @@
 ---
-title: My blog
-authors: maxime
+title: My New Blog Setup: Docusaurus + GitHub Pages
+# authors: maxime
 tags: []
 ---
-
-# My New Blog Setup: Docusaurus + GitHub Pages  
 
 I recently rebuilt my personal website using [Docusaurus](https://docusaurus.io/) and now host it on GitHub Pages. After experimenting with various self-hosted options in the past, I wanted something simpler, faster, and easier to manage—Docusaurus turned out to be the perfect fit.
 
