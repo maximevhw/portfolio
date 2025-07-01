@@ -2,9 +2,12 @@ import { React, useEffect, useState } from 'react';
 import { ReactTerminal } from "react-terminal";
 import { useColorMode } from '@docusaurus/theme-common';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { isMobile } from "react-device-detect";
 import "./Terminal.css";
 
 function Terminal() {
+    if (isMobile) return null;
+    
     const { colorMode } = useColorMode();
     const [showCatPopup, setShowCatPopup] = useState(false);
     const welcomeMessage = (
@@ -66,6 +69,7 @@ function Terminal() {
     const currentTheme = colorMode === 'dark' ? darkTheme : lightTheme;
 
     return (
+        
         <div className="terminal-container">
             <h2>Terminal</h2>
             <div className="terminal-wrapper">
