@@ -1,10 +1,10 @@
 ---
-title: "My New Blog Setup: Docusaurus + GitHub Pages"
+title: "My New Blog Setup"
 # authors: maxime
 tags: []
 ---
 
-I recently rebuilt my personal website using [Docusaurus](https://docusaurus.io/) and now host it on GitHub Pages. After experimenting with various self-hosted options in the past, I wanted something simpler, faster, and easier to manage—Docusaurus turned out to be the perfect fit.
+I recently rebuilt my personal website using [Docusaurus](https://docusaurus.io/) and now host it on GitHub Pages. After experimenting with various self-hosted options in the past, I wanted something simpler, faster, and easier to manage. Docusaurus turned out to be the perfect fit.
 
 ## Why Docusaurus?
 
@@ -15,8 +15,8 @@ I recently rebuilt my personal website using [Docusaurus](https://docusaurus.io/
 
 ## Deployment with GitHub Pages
 
-I host the site for free via GitHub Pages, with automatic deployment on every push to the `main` branch.  
-No server to maintain, no security patching—just clean builds and instant updates.
+I host the site for free via GitHub Pages, with automatic deployment on every push using GitHub actions.  
+No server to maintain, no security patching. Just clean builds and instant updates.
 
 ## What About My Old Setup?
 
