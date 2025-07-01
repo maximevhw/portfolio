@@ -5,6 +5,8 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ProfileCard from '@site/src/components/ProfileCard';
 import LetterGlitch from '@site/src/components/LetterGlitch';
+import { TerminalContextProvider } from "react-terminal";
+import Terminal from '@site/src/components/Terminal';
 
 import CustomTimeline from '@site/src/components/Timelines';
 
@@ -13,7 +15,7 @@ import styles from './index.module.css';
 
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       {/* LetterGlitch as background */}
@@ -26,7 +28,7 @@ function HomepageHeader() {
         zIndex: 1
       }}>
         <LetterGlitch />
-      </div>        
+      </div>
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <ProfileCard
@@ -43,7 +45,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -51,6 +53,9 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <CustomTimeline />
+        <TerminalContextProvider>
+          <Terminal />
+        </TerminalContextProvider>
       </main>
     </Layout>
   );

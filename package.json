@@ -27,6 +27,7 @@
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-terminal": "^1.4.5",
     "react-vertical-timeline-component": "^3.5.3"
   },
   "devDependencies": {
