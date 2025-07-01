@@ -1,10 +1,12 @@
-import React from "react";
+import { React, useEffect, useState } from 'react';
 import { ReactTerminal } from "react-terminal";
 import { useColorMode } from '@docusaurus/theme-common';
 import "./Terminal.css";
 
 function Terminal() {
     const { colorMode } = useColorMode();
+    const [showCatPopup, setShowCatPopup] = useState(false);
+    const [catImageUrl, setCatImageUrl] = useState('');
     const welcomeMessage = (
         <span>
             Type "help" for all available commands. <br />
@@ -14,21 +16,23 @@ function Terminal() {
         <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
             <li><span style={{ color: 'blue' }}>•</span> Name: Maxime Vanhoorneweder</li>
             <li><span style={{ color: 'blue' }}>•</span> Profession: Cybersecurity Graduate</li>
-            <li><span style={{ color: 'blue' }}>•</span> Intrests: Pentesting and SOC operations</li>
+            <li><span style={{ color: 'blue' }}>•</span> Interest: Pentesting and SOC operations</li>
             <li><span style={{ color: 'blue' }}>•</span> Hobbies: Cars</li>
         </ul>
     );
 
-    const cat = (
-        <span>
-            Here's a cat for you! <br />
-            <img src="https://cataas.com/cat" alt="cat" style={{ maxWidth: '100%', height: 'auto' }} />
-        </span>
-    );
+    function CatPopup() {
+        setCatImageUrl(`https://cataas.com/cat?${Date.now()}`);
+        setShowCatPopup(true);
+        return (
+            <span>Here's a cat for you!</span>
+        );
+    }
 
     // Default commands that can be extended
     const defaultCommands = {
         whoami: whoami,
+        cat: CatPopup,
         help: "Available commands: whoami, help, clear, ls",
         ls: "tutorial.js  index.js  blog.js  secret.js",
         echo: (args) => args.join(' '),
@@ -66,6 +70,28 @@ function Terminal() {
                     theme="custom-theme"
                 />
             </div>
+            
+            {showCatPopup && (
+                <div 
+                    onClick={() => setShowCatPopup(false)}
+                    className="cat-popup-overlay">
+                    <div 
+                        onClick={(e) => e.stopPropagation()}
+                        className="cat-popup-modal">
+                        <button
+                            onClick={() => setShowCatPopup(false)}
+                            className="cat-popup-close-button"
+                        >
+                            ×
+                        </button>
+                        <img 
+                            src={catImageUrl} 
+                            alt="Random Cat" 
+                            className="cat-popup-image"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
