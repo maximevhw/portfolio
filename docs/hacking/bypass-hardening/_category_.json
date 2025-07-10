@@ -1,0 +1,7 @@
+{
+  "label": "Bypass Hardening",
+  "link": {
+    "type": "generated-index",
+    "description": "Bypass hardening techniques to for example open cmd.exe or powershell.exe on a hardened Windows system."
+  }
+}

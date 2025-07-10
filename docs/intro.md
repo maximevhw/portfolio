@@ -1,47 +1,47 @@
 ---
 sidebar_position: 1
+title: Intro
 ---
 
-# Tutorial Intro
+# 🧠 Maxime’s Knowledge Base
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to my personal knowledge base, a collection of notes, ideas, and practical examples from across the IT and cybersecurity landscape.
 
-## Getting Started
+This isn't meant to be a formal guide or textbook. It's a **second brain**:  
+A place to **store**, **refine**, and **connect** knowledge I’ve gained through study, work, and hands-on experience.
 
-Get started by **creating a new site**.
+---
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 🗂️ What You'll Find Here
 
-### What you'll need
+- **Pentesting & Red Teaming**  
+  Real-world tactics, bypasses, shell tricks, and post-exploitation techniques.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- **Blue Teaming & Detection**  
+  Notes on log analysis, hardening, and defensive measures.
 
-## Generate a new site
+- **General IT Knowledge**  
+  Useful how-tos, sysadmin notes, scripting shortcuts, and troubleshooting steps.
 
-Generate a new Docusaurus site using the **classic template**.
+- **Windows & Linux Internals**  
+  Deep dives into OS behavior, permissions, and system interactions.
 
-The classic template will automatically be added to your project after you run the command:
+- **Tools & Scripts**  
+  Handy one-liners, automation snippets, and script references.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- **Lessons Learned**  
+  Short reflections on what worked (or didn’t), and why.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+---
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## 🎯 Why This Exists
 
-## Start your site
+This documentation isn't perfect — and that's okay.  
+It was never meant to be.  
+Primarily, I built this to help **myself**: to keep track of things I’ve learned, solved, or want to revisit later.
 
-Run the development server:
+But I decided to make it public, because **you never know**. Maybe someone else will stumble across one of these notes and find something useful.  
+If that’s you: glad it helped!
 
-```bash
-cd my-website
-npm run start
-```
+---
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
