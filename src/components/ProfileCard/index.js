@@ -43,7 +43,7 @@ const ProfileCardComponent = ({
   enableTilt = true,
   miniAvatarUrl,
   name = "Maxime Vanhoorneweder",
-  title = "Ethical Hacker",
+  title = "Junior Consultant @Xalient",
   handle = "maxime_vhw",
   status = "Open to work",
   contactText = "Contact",

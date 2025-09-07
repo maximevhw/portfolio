@@ -32,7 +32,7 @@ function HomepageHeader() {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <ProfileCard
-            showUserInfo={true}
+            showUserInfo={false}
             enableTilt={true}
             onContactClick={
               () => window.open('https://www.linkedin.com/in/maxime-vanhoorneweder/', '_blank')
